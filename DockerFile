@@ -1,0 +1,5 @@
+FROM ubuntu:22.04
+# windows cross build
+RUN apt update; DEBIAN_FRONTEND=noninteractive apt install -y g++-mingw-w64-i686 g++-mingw-w64 win-iconv-mingw-w64-dev
+# linux build
+RUN apt update; DEBIAN_FRONTEND=noninteractive apt install -y g++
